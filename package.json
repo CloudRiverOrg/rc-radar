@@ -1,0 +1,14 @@
+{
+  "name": "rc-radar",
+  "version": "1.0.0",
+  "description": "rc-radar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "radar"
+  ],
+  "author": "Ulysses3000",
+  "license": "ISC"
+}
