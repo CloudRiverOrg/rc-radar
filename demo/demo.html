@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./demo.css">
+    <title>rc-radar-demo</title>
+</head>
+<body>
+    <div class="content">
+        <canvas id="myCanvas" width="500" height="500"></canvas>
+    </div>
+</body>
+<script src="../src/index.js"></script>
+<script>
+    let themeColor = '#F67763';
+    let option = {
+        // width: 600,
+        // height: 600,
+        centerPoint: {
+            position: [250,250],
+            radius: 7,
+            bgc: themeColor
+        },
+        ring: {
+            maxValue: 100,
+            maxRadius: 170,
+            num: 5,
+            color: '#9993',
+            outRingColor: themeColor
+        },
+        area: {
+            lineColor: themeColor,
+            borderColor: themeColor,
+            bgc: '#33f2',
+            angleColor: '#FF4F33'
+        },
+        labelTxt: {
+            hasRing: true,
+            ringRadius: 40,
+            fontSize: 14,
+            fontColor: '#666'
+        }
+    }
+
+    let data = [
+        { name: '张三1', value: 100},
+        { name: '张三2', value: 80},
+        { name: '张三3', value: 60},
+        { name: '张三4', value: 40},
+        { name: '张三5', value: 20},
+        { name: '张三6', value: 60},
+    ]
+    
+    window.onload = function () {
+        let radar = new Radar('#myCanvas', option);
+        radar.render(data);
+    }
+
+
+</script>
+
+</html>
